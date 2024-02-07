@@ -31,7 +31,7 @@ public partial class Usuarios
 
     public string? ModificadoPor { get; set; }
 
-    public DateTime? FechaModificacion { get; set; }
+    public DateTime? FechaModificaciones { get; set; }
 
     //public virtual ICollection<Bitacora> Bitacora { get; set; } = new List<Bitacora>();
 
