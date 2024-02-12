@@ -1,5 +1,6 @@
 
 using AMBE.Data;
+using AMBE.Services;
 using Microsoft.EntityFrameworkCore;
 
 namespace AMBE
@@ -20,6 +21,11 @@ namespace AMBE
             {
                 o.UseMySql(builder.Configuration.GetConnectionString("ConexionMySql"), ServerVersion.Parse("8.0.32-mysql"));
             });
+
+            builder.Services.AddScoped<IServicioUsuario, ServicioUsuario>();
+            builder.Services.AddScoped<IServicioBitacora,ServicioBitacora>();
+
+
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
